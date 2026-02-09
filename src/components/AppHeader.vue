@@ -6,7 +6,7 @@
         <div class="logo">📝</div>
         <div class="brandText">
           <div class="title">Journaling Analyzer</div>
-          <div class="subtitle">Track emotions • reflect • grow</div>
+          <div class="subtitle">Reflect • Track • Grow</div>
         </div>
       </div>
 
@@ -15,11 +15,9 @@
         <RouterLink to="/write" class="tab" active-class="active">
           Write Journaling
         </RouterLink>
-
         <RouterLink to="/daily" class="tab" active-class="active">
           Daily Report
         </RouterLink>
-
         <RouterLink to="/monthly" class="tab" active-class="active">
           Monthly Report
         </RouterLink>
@@ -44,9 +42,9 @@ import { RouterLink } from "vue-router"
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(229, 231, 235, 0.9);
+  border-bottom: 1px solid #eef2f7;
 }
 
 .inner {
@@ -73,23 +71,22 @@ import { RouterLink } from "vue-router"
   display: grid;
   place-items: center;
   font-size: 18px;
-  border: 1px solid rgba(229, 231, 235, 0.9);
-  background: linear-gradient(180deg, #ffffff, #f6f7fb);
-  box-shadow: 0 10px 25px rgba(17, 24, 39, 0.06);
+  background: linear-gradient(180deg, #ffffff, #f6f7ff);
+  border: 1px solid #eef2f7;
+  box-shadow: 0 10px 22px rgba(31, 41, 55, 0.06);
 }
-.brandText .title {
-  font-weight: 800;
-  letter-spacing: 0.2px;
-  color: #111827;
+.title {
+  font-weight: 900;
+  color: #1f2937;
   line-height: 1.2;
 }
-.brandText .subtitle {
+.subtitle {
   font-size: 12px;
   color: #6b7280;
   margin-top: 2px;
 }
 
-/* Nav Tabs */
+/* Nav */
 .nav {
   display: flex;
   gap: 10px;
@@ -97,55 +94,56 @@ import { RouterLink } from "vue-router"
   justify-content: center;
   padding: 6px;
   border-radius: 999px;
-  border: 1px solid rgba(229, 231, 235, 0.9);
-  background: linear-gradient(180deg, #ffffff, #fafafa);
-  box-shadow: 0 12px 30px rgba(17, 24, 39, 0.05);
+  border: 1px solid #eef2f7;
+  background: #ffffff;
+  box-shadow: 0 12px 28px rgba(31, 41, 55, 0.06);
 }
 
 .tab {
   text-decoration: none;
-  font-weight: 700;
+  font-weight: 800;
   font-size: 13px;
   padding: 10px 14px;
   border-radius: 999px;
-  color: #374151;
-  transition: transform 0.12s ease, background 0.12s ease, color 0.12s ease;
+  color: #4b5563;
+  transition: background 0.12s ease, transform 0.12s ease;
   white-space: nowrap;
 }
 .tab:hover {
-  background: rgba(17, 24, 39, 0.06);
+  background: #f3f4f6;
   transform: translateY(-1px);
 }
+
+/* Active tab = soft pastel */
 .active {
-  color: #111827;
-  background: #111827;
-  color: #fff;
-  box-shadow: 0 10px 22px rgba(17, 24, 39, 0.18);
+  color: #1f2937;
+  background: linear-gradient(180deg, #eef2ff, #ffffff);
+  border: 1px solid #e0e7ff;
+  box-shadow: 0 10px 22px rgba(99, 102, 241, 0.12);
 }
 
-/* Actions */
+/* Button */
 .actions {
   display: flex;
   justify-content: flex-end;
 }
 .primaryBtn {
   text-decoration: none;
-  font-weight: 800;
+  font-weight: 900;
   font-size: 13px;
   padding: 10px 14px;
-  border-radius: 12px;
-  border: 1px solid rgba(17, 24, 39, 0.15);
-  background: linear-gradient(180deg, #111827, #0b1220);
-  color: #fff;
-  box-shadow: 0 14px 30px rgba(17, 24, 39, 0.22);
+  border-radius: 14px;
+  border: 1px solid #e0e7ff;
+  background: linear-gradient(180deg, #f5f3ff, #ffffff);
+  color: #3730a3;
+  box-shadow: 0 14px 28px rgba(99, 102, 241, 0.12);
   transition: transform 0.12s ease, box-shadow 0.12s ease;
 }
 .primaryBtn:hover {
   transform: translateY(-1px);
-  box-shadow: 0 18px 36px rgba(17, 24, 39, 0.26);
+  box-shadow: 0 18px 34px rgba(99, 102, 241, 0.16);
 }
 
-/* Responsive */
 @media (max-width: 900px) {
   .inner {
     grid-template-columns: 1fr;
